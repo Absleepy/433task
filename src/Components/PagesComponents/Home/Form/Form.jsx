@@ -18,6 +18,7 @@ const Form = ({ data, handleChange, handleSubmit, errors }) => {
         <label htmlFor='name'>NAME</label>
         <input
           name='name'
+          placeholder='Enter Your Name'
           onChange={handleChange}
           type='text'
           id='name'
@@ -29,6 +30,7 @@ const Form = ({ data, handleChange, handleSubmit, errors }) => {
         <label htmlFor='email'>EMAIL</label>
         <input
           name='email'
+          placeholder='Enter Your Email'
           onChange={handleChange}
           type='email'
           className={errors?.email && styles.error}

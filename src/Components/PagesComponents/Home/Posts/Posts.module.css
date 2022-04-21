@@ -1,0 +1,41 @@
+.container{
+    max-width: 600px;
+    width: 94%;
+    margin: 50px auto;
+}
+.pageTitle{
+    padding: 8px;
+    position: sticky;
+    top: 0;
+    color: #fff;
+    font-size: 1.12rem;
+    text-align: center;
+    font-weight: bold;
+    background-color: var(--color-primary);
+}
+.post{
+    border: 2px solid #000;
+    margin: 12px 0;
+    padding: 12px;
+}
+.postTitle{
+    font-weight: bold;
+    font-size: 1rem;
+}
+.addButton{
+    padding: 20px 8px;
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    border: none;
+    color: #fff;
+    font-size: 1.12rem;
+    text-align: center;
+    font-weight: bold;
+    background-color: var(--color-primary);
+    cursor: pointer;
+    transition: .4s ease;
+}
+.addButton:hover{
+  background-color: #2f1830;
+}

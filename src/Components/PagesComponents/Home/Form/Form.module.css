@@ -38,11 +38,17 @@
   border: 1px solid transparent;
   border-radius: 3px;
   padding: 8px;
+  border: 1px solid transparent;
   min-height: 25px;
   font-size: 1.12rem;
 }
 .error {
-  border: 1px solid red !important;
+  border-color: red !important;
+}
+span.error{
+  margin-left: 12px;
+  font-size: .8rem;
+  color: red;
 }
 .inputContainer input:focus {
   outline: none;

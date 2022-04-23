@@ -14,3 +14,12 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.logoutBtn{
+  background-color: var(--color-primary);
+  padding: 12px;
+  color: #fff;
+  margin: 12px;
+  cursor: pointer;
+  border-radius: 50vw;
+}

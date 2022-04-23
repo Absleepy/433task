@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import { getPostsAction } from '../../../Redux/Actions/Posts/Posts.actions';
 import styles from './AddPost.module.css';
 const AddPost = () => {
@@ -10,16 +11,18 @@ const AddPost = () => {
     const handleChange = e => {
         const { name, value } = e.target;
         setValues({
+            ...values,
             [name]: value
         })
     }
     const { posts } = useSelector(state => state.posts);
-    console.log({ posts });
     const dispatch = useDispatch();
+    const navigate = useNavigate();
     const handleSubmit = e => {
         e.preventDefault();
-        const data = [{ title: values.title, description: values.description }, ...posts];
-        dispatch(getPostsAction())
+        const data = [{ title: values.title, body: values.description }, ...posts];
+        dispatch(getPostsAction(data));
+        navigate('/')
     };
     return (
         <form className={styles.container}>
@@ -33,7 +36,7 @@ const AddPost = () => {
                     onChange={handleChange}
                     type='text'
                     id='title'
-                    value={values?.title}
+                    value={values.title}
                 />
             </div>
             <div className={styles.inputContainer}>
@@ -44,7 +47,7 @@ const AddPost = () => {
                     onChange={handleChange}
                     type='text'
                     id='description'
-                    value={values?.description}
+                    value={values.description}
                 />
             </div>
 

@@ -4,13 +4,13 @@ import {
   Route,
 } from "react-router-dom";
 import Home from './Pages/Home/index';
-import AddPost from './Pages/AddPost/index';
+import Login from "./Pages/Login/Login";
 
 function App() {
   return <BrowserRouter>
     <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/add-new-post" element={<AddPost />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/" element={<Home />} /> 
 
     </Routes>
   </BrowserRouter>

@@ -15,7 +15,7 @@ const Form = ({ data, handleChange, handleSubmit, errors }) => {
         <input onChange={handleChange} type='file' name='user' id='user' />
       </div>
       <div className={styles.inputContainer}>
-        <label htmlFor='name'>NAME</label>
+        <label htmlFor='name'>NAME {errors?.name && <span className={styles.error}>Please enter a valid name</span>}</label>
         <input
           name='name'
           placeholder='Enter Your Name'
@@ -27,7 +27,7 @@ const Form = ({ data, handleChange, handleSubmit, errors }) => {
         />
       </div>
       <div className={styles.inputContainer}>
-        <label htmlFor='email'>EMAIL</label>
+        <label htmlFor='email'>EMAIL {errors?.email && <span className={styles.error}>Please enter a valid email</span>}</label>
         <input
           name='email'
           placeholder='Enter Your Email'
@@ -39,7 +39,7 @@ const Form = ({ data, handleChange, handleSubmit, errors }) => {
         />
       </div>
       <div className={styles.inputContainer}>
-        <label htmlFor='dob'>DATE OF BIRTH</label>
+        <label htmlFor='dob'>DATE OF BIRTH {errors?.dob && <span className={styles.error}>Please enter a valid Date of birth</span>}</label>
         <input
           name='dob'
           onChange={handleChange}
